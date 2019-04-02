@@ -1,0 +1,19 @@
+server:
+  port: 8007
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8005/eureka/
+    registerWithEureka: true
+
+ribbon:
+  eureka:
+    enable: true
+
+zuul:
+  prefix: /filmin
+  routes:
+    movie:
+      path: /movies/**
+      serviceId: apiApp
