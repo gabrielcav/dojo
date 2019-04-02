@@ -1,0 +1,11 @@
+server: 
+  port: 8006
+
+eureka: 
+  instance: 
+    hostname: batata
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8005/eureka/
